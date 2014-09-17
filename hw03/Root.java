@@ -1,3 +1,6 @@
+//Geoff Gill
+//CSE02
+//hw03
 import java.util.Scanner;
 
 public class Root {

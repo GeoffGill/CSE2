@@ -1,4 +1,7 @@
-import java.util.Scanner;
+
+//Geoff Gill
+//CSE02
+//hw03import java.util.Scanner;
 
 public class FourDigits {
     			  // main method required for every Java program
