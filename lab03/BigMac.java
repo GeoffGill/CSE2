@@ -43,3 +43,43 @@ public class BigMac {
    	    
     }  //end of main method   
 } //end of class
+
+
+
+
+
+
+//This program will accept an input (number of big macs ordered, price and tax%)
+//and from there will output the total cost
+
+import java.util.Scanner;
+
+public class BigMac {
+    			  // main method required for every Java program
+   	public static void main(String[] args) {    
+   	    Scanner myScanner;
+   	    myScanner = new Scanner ( System.in );
+   	    System.out.print(
+   	        "Enter the desired number of Big Macs(must be >0) --> ");
+   	    
+   	    int nBigMacs = myScanner.nextInt();
+   	        if (nBigMacs > 0){
+   	            System.out.println("you did not enter a greater than 0 integer");
+   	            System.out.println("Enter the desired number of Big Macs(must be >0) --> ");
+   	            }
+   	        else ();{
+   	            }
+   	    
+        double bigMac$ = 2.22;
+
+        cost$ = nBigMacs*bigMac$;
+        System.out.println("The total cost of " +nBigMacs
+            +" BigMac is $ " + bigMac$);
+            
+        System.out.println("Do you want an order of fries with that? (Y,y,N,N");
+        
+
+
+   	    
+    }  //end of main method   
+} //end of class
