@@ -2,7 +2,7 @@
 //hw07
 //10/22/14
 //Explanation:  This program will print out 3 pyramids of integers with four tiers in each pyramid
-        //Each pyramid is identical but they are created using for, while, and do-while loops, respectively
+        //Each pyramid is identical but they are created using for, while, and do-while loops respectivel
 
 
 import java.util.Scanner;
@@ -26,17 +26,17 @@ public class NumberStacks{
         // 'c' is a variable to increment the dashes
         // 'd' is a variable to increment the spacing
         System.out.println("Using for loops");
-        for (int stack = 0;stack<=3;stack++){
+        for (int stack = 0;stack<=(input-1);stack++){
             for(int a=0;a<=stack;a++){              //increments the line
-                for(int d=0;d<=(4-stack);d++){      //increments the spacing for the stacks
+                for(int d=0;d<=(input-stack);d++){      //increments the spacing for the stacks
                     System.out.print(" ");
                 }
                 for(int b=0;(b<=(stack*2));b++){    //prints out the number
-                    System.out.print((input+stack));
+                    System.out.print((stack+1));
                 }
             System.out.println();
             }
-        for(int d=0;d<=(4-stack);d++){          //correct spacing for the dashes
+        for(int d=0;d<=(input-stack);d++){          //correct spacing for the dashes
                     System.out.print(" ");
         }           
         for(int c=0;c<(1+stack*2);c++){         //prints out the dashes
@@ -54,25 +54,25 @@ public class NumberStacks{
         int c=0;        //increments the dashes
         int d=0;        //increments the spacing
         //this while loop is for the series of numbers, and it is incremented by stacks
-        while(stack <=3){   
+        while(stack <=(input-1)){   
             a=0;        //resets variables
             c=0;        //resets variables
             while(a<=stack){
                 b=0;        //resets variables
                 d=0;        //resets variables
-                while(d<=(4-stack)){        
+                while(d<=(input-stack)){        
                     System.out.print(" ");      //spaces the stacks
                     d++;
                 }
                 while(b<=(stack*2)){            //Determines the number for each stack
-                    System.out.print((input+stack));
+                    System.out.print((stack+1));
                     b++;
                 }
             System.out.println();               
             a++;                                //increments the line by 1
             }
         d=0;
-        while(d<=(4-stack)){
+        while(d<=(input-stack)){
             System.out.print(" ");              //spaces out the dashes
             d++;
         }
@@ -105,9 +105,9 @@ public class NumberStacks{
                 do{
                    System.out.print(" ");       
                    d++;
-                }while(d<=(4-stack));           //incremetns spacing for stacks
+                }while(d<=(input-stack));           //incremetns spacing for stacks
                 do{
-                   System.out.print((input+stack));     //prints out stack numbers
+                   System.out.print((1+stack));     //prints out stack numbers
                    b++;
                 }while(b<=(stack*2));                   //increments the number of numbers on a line
                 System.out.println();
@@ -117,14 +117,14 @@ public class NumberStacks{
             do{
                 System.out.print(" ");                  //spaces out the dashes
                 d++;
-            }while(d<=4-stack);
+            }while(d<=input-stack);
             do{
                 System.out.print("-");                  //prints out the dashes
                 c++;
             }while(c<(1+stack*2));
             System.out.println();                       //indents to new line
             stack++;                                    //increments stacks
-        }while(stack <=3);
+        }while(stack <=(input-1));
     }
 }
     
