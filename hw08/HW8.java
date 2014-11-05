@@ -1,5 +1,6 @@
 //Geoff Gill
 //CSE2 Hw08
+//THis script Accepts inputs and prints allowable outputs as defined on coruse site
 
 
 import java.util.Scanner;

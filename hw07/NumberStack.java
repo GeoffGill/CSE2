@@ -76,7 +76,7 @@ public class NumberStack{
             System.out.print(" ");              //spaces out the dashes
             d++;
         }
-        while(c<(1+stack*2)){
+        while(c<d(1+stack*2)){
             System.out.print("-");              //inserts spacer dashes
             c++;
         }
