@@ -6,34 +6,31 @@
 
 import java.util.Scanner;
 public class Enigma1{
-    public static void main(String []arg){
-        double percent;
-        Scanner scan=new Scanner(System.in);
-        System.out.print("Enter a value for the percent (0, 1,...99)- ");
-        double x=scan.nextDouble();
-        if((x>=0)&&(x<100)){
-            System.out.println("You entered "+x+"%");
-            double remainder = (1-x/100);
-            //print out the proportion remaining for select percentages
-            System.out.println("The proportion remaining is "+ remainder);
-        }
-        else{
-            System.out.println("You did not enter a valid input");
-        }
-    }
-}   
+  public static void main(String []arg){
+    Scanner scan = new Scanner( System.in);
+    
+    System.out.print("Enter a value for the percent (0, 1,...99) ");
+    double percent = scan.hasNextInt() ? scan.nextInt() : -1;
+    double x = percent / 100;
+    
+    if(percent <= 0 || percent >= 100)System.out.println("Not a proper integer or not an integer...");
+    
+    System.out.println("You entered " + percent + "%");//print out the proportion remaining for select percentages
+         if(1-percent/100==0.93)System.out.println("The proportion remaining is "+0.93);   //when the user enters 7 
+    else if(1-percent/100==0.59)System.out.println("The proportion remaining is "+0.59);//when the user enters 41
+    else if(1-percent/100==0.86)System.out.println("The proportion remaining is "+0.86);//when the user enters 14
+    else if(1-percent/100==0.67)System.out.println("The proportion remaining is "+0.67);//when the user enters 33
+    else if(1-percent/100==0.40)System.out.println("The proportion remaining is "+0.40);//when the user enters 60
+   }
+}
 
 /* Error report: 
- *    (Exlain the error(s) that occur here, in this comment,
- *    and fix the errors)
- *      The code currectly only works for inputs 7,41,14,33,60 and not all inputs 1-99
- *      It also does not test to see if the input is valid, and if invalid doesnt print out a message 
- *          saying so
- *      There also was no scanner defined
- *    Hint: What kinds of input are unacceptable? What kinds of
- *        acceptable input don't produce the correct answer?
- *      I defined a scanner
- *      I also defined a variable remander and print out that variable dependant on the input
- *      I included an if statment to limit values 0-99, and a print out if the value isnt in that range
- * 
+ *  fixed input, made sure it's within the boundaries
+ *  fixed output, made sure it's correct
+ *  
+ *  this program doesn't work when the input is not correct or when it's not a 
+ *  7, 41, 14, 33 or 66
+ *  
+ *  
+ *  
  */
